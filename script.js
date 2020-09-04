@@ -87,10 +87,12 @@ if (window.localStorage) {
   var totalBill = document.getElementById('totalBill');
   var tipSatisfac = document.getElementById('satisfaction');
   var pplAmount = document.getElementById('peopleAmount');
+  var finalTip = document.getElementById('totalTip');
 
   totalBill.value = localStorage.getItem('totalBill');  
  tipSatisfac.value = localStorage.getItem('satisfaction');      
  pplAmount.value = localStorage.getItem('peopleAmount');
+ finalTip = document.getElementById('totalTip');
 
   totalBill.addEventListener('input', function () {    
     localStorage.setItem('totalBill', totalBill.value);
@@ -104,6 +106,10 @@ if (window.localStorage) {
     localStorage.setItem('peopleAmount', pplAmount.value);
   }, false);
   
+  totalTip.addEventListener('tip', function () {    
+    localStorage.setItem('totalTip', pplAmount.value);
+  }, false);
+
 };
 
 
