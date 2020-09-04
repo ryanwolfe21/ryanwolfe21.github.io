@@ -107,7 +107,7 @@ if (window.localStorage) {
   }, false);
   
   totalTip.addEventListener('tip', function () {    
-    localStorage.setItem('totalTip', totalTip.value);
+    localStorage.setItem('totalTip', finalTip.value);
   }, false);
 
 };
