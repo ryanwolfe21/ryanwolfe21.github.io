@@ -92,7 +92,7 @@ if (window.localStorage) {
   totalBill.value = localStorage.getItem('totalBill');  
  tipSatisfac.value = localStorage.getItem('satisfaction');      
  pplAmount.value = localStorage.getItem('peopleAmount');
- finalTip = document.getElementById('totalTip');
+ finalTip.value = localStorage.getElementById('totalTip');
 
   totalBill.addEventListener('input', function () {    
     localStorage.setItem('totalBill', totalBill.value);
