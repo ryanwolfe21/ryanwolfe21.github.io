@@ -19,20 +19,20 @@ if (peopleAmount === "" || peopleAmount <= 1) {
     document.getElementById("each").style.display =
     "block";
 }
-//Calculate tip
+//Calculate totalTip
 var total = (billAmount * serviceQuality) / peopleAmount;
 //round to two decimal places
 total = Math.round(total * 100) / 100;
 //next line allows us to always have two digits after decimal point
 total = total.toFixed(2);
-//Display the tip
+//Display the totalTip
 document.getElementById("totalTip").style.display =
 "block";
-document.getElementById("tip").innerHTML = total;
+document.getElementById("totalTip").innerHTML = total;
 
 }
 
-//Hide the tip amount on load
+//Hide the totalTip amount on load
 document.getElementById("totalTip").style.display =
 "none";
 document.getElementById("each").style.display =
@@ -70,7 +70,7 @@ function checkPeople() {
   }
   
   function tipPeople() {                     
-    elMsg.className = 'tip';                     
+    elMsg.className = 'totalTip';                     
     elMsg.innerHTML = 'please enter at least 1'; 
   }
   
@@ -87,12 +87,10 @@ if (window.localStorage) {
   var totalBill = document.getElementById('totalBill');
   var tipSatisfac = document.getElementById('satisfaction');
   var pplAmount = document.getElementById('peopleAmount');
-  var finalTip = document.getElementById('totalTip');
 
  totalBill.value = localStorage.getItem('totalBill');  
  tipSatisfac.value = localStorage.getItem('satisfaction');      
  pplAmount.value = localStorage.getItem('peopleAmount');
- finalTip.value = localStorage.getItem('totalTip');
 
   totalBill.addEventListener('input', function () {    
     localStorage.setItem('totalBill', totalBill.value);
@@ -105,12 +103,26 @@ if (window.localStorage) {
   pplAmount.addEventListener('input', function () {    
     localStorage.setItem('peopleAmount', pplAmount.value);
   }, false);
-  
-  finalTip.addEventListener('tip', function () {    
-    localStorage.setItem('totalTip', finalTip.value);
-  }, false);
-
 };
+
+
+//JSON PARSE AND STRINGIFY
+var finalTip = document.getElementById("totalTip");
+
+function updateDataFromStorage() {
+    if (
+      window.localStorage.getItem("totalTip") &&
+      JSON.parse(window.localStorage.getItem("totalTip")).length > 0
+    ) {
+      return (finalTip = JSON.parse(
+        window.localStorage.getItem("totalTip")
+      ));
+    }
+  }
+
+  function updateLocalStorage() {
+    window.localStorage.setItem("totalTip", JSON.stringify(finalTip));
+  };
 
 
   
