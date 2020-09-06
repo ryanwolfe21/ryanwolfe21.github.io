@@ -1,0 +1,69 @@
+/*CSS Tip Calculator Style Sheet */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+html {
+    font-family: 'Oswald', sans-serif;}
+
+body {
+    color: white;
+    background-image: url(https://user-images.githubusercontent.com/69769079/91909463-13b80a80-ec62-11ea-91e0-4fa5ba272ddd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed, center;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20% 30% 30% 30%;
+    border-radius: 25px 25px 25px 25px;}
+
+h1 { 
+    font-size: 42px;}
+
+p { 
+    font-size: 25px;}
+
+table {
+    text-align: center;}
+
+#wrapper {
+    background-color: RGB(61,72,73);
+    border-radius: 25px 25px 25px 25px;
+    padding: 0px 20px 20px 20px;
+    margin: auto;
+    width: 100%;}
+
+input {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: RGB(61,72,73);
+    border: white solid;
+    border-width: 3px;
+    padding: 7px;
+}   
+
+select {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: RGB(61,72,73);
+    border: white solid;
+    border-width: 3px;
+    padding: 7px;
+}
+
+#calculate {
+    text-align: center;
+    font-size: 20px;
+    color: RGB(61,72,73);
+    background-color: white;
+    border: white solid;
+    border-width: 3px;
+    padding: 7px;
+    text-transform: uppercase;}
+
+#totalTip {
+    font-size: 30px;}
+
+#tip {
+    text-align: center;} 
