@@ -1,4 +1,4 @@
-//Add Local Storage and Event Listeners
+//Add Local Storage and JSON parse
 const movies = JSON.parse(localStorage.getItem("favoriteMovies")) || []
 
 function renderList () {
@@ -9,7 +9,7 @@ function renderList () {
        })
       
 }
-
+//Add Event Listener and JSON Stringify
 document.getElementById("save").addEventListener("click", function() {
     var favoriteMovies = document.getElementById("favoriteMovies");
     movies.push(favoriteMovies.value)
