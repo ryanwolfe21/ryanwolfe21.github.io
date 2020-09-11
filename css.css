@@ -38,13 +38,3 @@ input {
     border: white solid;
     border-width: 3px;
     padding: 7px;}   
-
-#ADD {
-    text-align: center;
-    font-size: 20px;
-    color: RGB(61,72,73);
-    background-color: white;
-    border: white solid;
-    border-width: 3px;
-    padding: 7px;
-    text-transform: uppercase;}
