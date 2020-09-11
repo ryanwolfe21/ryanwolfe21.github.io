@@ -19,6 +19,7 @@ document.getElementById("save").addEventListener("click", function() {
 
   document.getElementById("delete").addEventListener('click', function(){
     localStorage.removeItem("favoriteMovies")
+    window.location.reload()
   })
 
 
