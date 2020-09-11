@@ -17,5 +17,9 @@ document.getElementById("save").addEventListener("click", function() {
     window.location.reload()
   });
 
+  document.getElementById("delete").addEventListener('click', function(){
+    localStorage.removeItem("favoriteMovies")
+  })
+
 
   renderList(); 
